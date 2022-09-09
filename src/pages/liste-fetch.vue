@@ -5,11 +5,11 @@
 
     const Maisons = await getMaisons.json()
 </script>
-    
+        
     
 <template>
     <div>
-        <p>Liste</p>
+        <p>Liste avec fetch</p>
        <Card v-for="m in Maisons" :key="m" v-bind="m"></Card>
     </div>
 </template>

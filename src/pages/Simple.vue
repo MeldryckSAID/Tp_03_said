@@ -4,12 +4,12 @@ import Card from "../components/card.vue";
 
 
 const unObjet = {
-    price: "100 800", 
-    name: "Random",
-    adresse: "Je sais pas ou",
+    price: "12 800", 
+    name: "Los Angeles",
+    adresse: "122 Elm Street",
     bed: 7,
     bathroom: "4",
-    mcarre: "99"
+    mcarre: "69"
 
 }
   /*  
@@ -29,7 +29,7 @@ const unObjet = {
     <div>
         <p>Simple</p>
         <Card></Card>
-        <Card v-bind="{name: 'oopsi', price:'300 000', adresse:'Une bonne adresse', bed:'8', bathroom: '3', mcarre:'87'}"></Card>
+        <Card v-bind="{name: 'France', price:'2 000', adresse:'Montbéliard', bed:'8', bathroom: '3', mcarre:'37'}"></Card>
         <Card v-bind="unObjet"></Card>
     </div>
 </template>
