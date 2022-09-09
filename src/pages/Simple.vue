@@ -29,7 +29,7 @@ const unObjet = {
     <div>
         <p>Simple</p>
         <Card></Card>
-        <Card v-bind="{name: 'oopsiz', price:'300 000', adresse:'Une bonne adresse', bed:'8', bathroom: '3', mcarre:'87'}"></Card>
+        <Card v-bind="{name: 'oopsi', price:'300 000', adresse:'Une bonne adresse', bed:'8', bathroom: '3', mcarre:'87'}"></Card>
         <Card v-bind="unObjet"></Card>
     </div>
 </template>
