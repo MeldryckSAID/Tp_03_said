@@ -15,7 +15,12 @@
   </nav>
 
   <!-- Affiche les pages -->
-  <router-view class="m-2 border-2 p-2" />
+  <Suspense>
+    <router-view class="m-2 border-2 p-2" />
+    <template #fallback>
+      Loading...
+    </template>
+  </Suspense>
 </template>
 
 <script setup lang="ts">

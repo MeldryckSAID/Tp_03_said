@@ -1,0 +1,34 @@
+[
+    {
+        "price": "100 800",
+        "name": "Random",
+        "adresse": "Je sais pas ou",
+        "bed": 7,
+        "bathroom": "4",
+        "mcarre": "99"
+    },
+    {
+        "price": "100 800",
+        "name": "Random",
+        "adresse": "Je saisdgdgdgdsgsd ou",
+        "bed": 7,
+        "bathroom": "4",
+        "mcarre": "99"
+    },
+    {
+        "price": "100 800",
+        "name": "Random",
+        "adresse": "Je sais pas ou",
+        "bed": 7,
+        "bathroom": "4",
+        "mcarre": "99"
+    },
+    {
+        "price": "100 800",
+        "name": "Random",
+        "adresse": "Je sais pas ou",
+        "bed": 7,
+        "bathroom": "4",
+        "mcarre": "99"
+    }
+]
