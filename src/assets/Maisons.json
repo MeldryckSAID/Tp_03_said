@@ -1,32 +1,32 @@
 [
     {
-        "price": "100 800",
-        "name": "Random",
-        "adresse": "Je sais pas ou",
+        "price": "10",
+        "name": "Nom",
+        "adresse": "Adresse",
         "bed": 7,
         "bathroom": "4",
         "mcarre": "99"
     },
     {
         "price": "100 800",
-        "name": "Random",
-        "adresse": "Je saisdgdgdgdsgsd ou",
+        "name": "Nom2",
+        "adresse": "Adresse 2",
+        "bed": 7,
+        "bathroom": "4",
+        "mcarre": "92"
+    },
+    {
+        "price": "10 800",
+        "name": "Nom3",
+        "adresse": "Adresse 3",
         "bed": 7,
         "bathroom": "4",
         "mcarre": "99"
     },
     {
-        "price": "100 800",
-        "name": "Random",
-        "adresse": "Je sais pas ou",
-        "bed": 7,
-        "bathroom": "4",
-        "mcarre": "99"
-    },
-    {
-        "price": "100 800",
-        "name": "Random",
-        "adresse": "Je sais pas ou",
+        "price": "102",
+        "name": "Nom4",
+        "adresse": "Adresse4",
         "bed": 7,
         "bathroom": "4",
         "mcarre": "99"
