@@ -2,15 +2,16 @@
 
     import Bed from "../components/icons/bed.vue";
     import Bath from "../components/icons/bath.vue";
-    import Mcarre from "../components/icons/mcarre.vue";
+    import Space from "../components/icons/space.vue";
 
    defineProps({
-      name : {type: String, default:'Tarpon Bat'                                },
-      price: {type:Number, default:'4800'                                        },
-      adresse: {type: String, default: '103 Lake Shores, Michigan, IN'          },
-      bed: {type:Number , default: 8                                           },
+      nom : {type: String, default:'remire'                                },
+      prix: {type:Number, default:'2700'                                        },
+      lieux: {type: String, default: 'montjoly 45 rue route des plages 97354'          },
+      bed: {type:Number , default: 4                                           },
       bathroom: {type:Number , default: 2                                       },
-      mcarre: {type:String , default: '6x7.5'                                    },
+      space: {type:String , default: '12*90'                                    },
+      Image:{type:String, default: "src/assets/house.png"},
       });
 
 </script>
@@ -38,9 +39,9 @@
         <div class="w-2/5">
           <div class="flex items-center">
             <p class="text-2xl font-bold text-indigo-500"></p>
-            <span class="text-xs font-normal text-gray-900">{{price}} /month</span>
+            <span class="text-xs font-normal text-gray-900">{{prix}} /month</span>
           </div>
-          <p class="text-2xl font-bold">{{name}}</p>
+          <p class="text-2xl font-bold">{{nom}}</p>
         </div>
         <div
           class="
@@ -57,7 +58,7 @@
         </div>
       </div>
       <p class="text-base font-normal text-gray-900">
-        {{adresse}}
+        {{lieux}}
       </p>
       <div class="w-full border border-indigo-50"></div>
       <div class="flex justify-between">
@@ -70,8 +71,8 @@
           <span class="text-xs text-gray-500">{{bathroom}} Bathrooms</span>
         </div>
         <div class="flex items-center gap-2">
-          <mcarre class="h-5 stroke-indigo-500"></mcarre>
-          <span class="text-xs text-gray-500">{{mcarre}} m²</span>
+          <space class="h-5 stroke-indigo-500"></space>
+          <span class="text-xs text-gray-500">{{space}} m²</span>
         </div>
       </div>
     </figcaption>

@@ -1,34 +1,35 @@
 [
     {
-        "price": "10",
-        "name": "Nom",
-        "adresse": "Adresse",
-        "bed": 7,
+        "prix": "100",
+        "nom": "cayenne",
+        "lieux": "97300",
+        "bed": 6,
         "bathroom": "4",
-        "mcarre": "99"
+        "space": "100",
+        "Image" : "src/assets/house.png"
     },
     {
-        "price": "100 800",
-        "name": "Nom2",
-        "adresse": "Adresse 2",
-        "bed": 7,
-        "bathroom": "4",
-        "mcarre": "92"
+        "prix": "100 800",
+        "nom": "matoury",
+        "lieux": "97351",
+        "bed": 13,
+        "bathroom": "9",
+        "space": "192"
     },
     {
-        "price": "10 800",
-        "name": "Nom3",
-        "adresse": "Adresse 3",
+        "prix": "10 80",
+        "nom": "soula",
+        "lieux": "97355",
         "bed": 7,
         "bathroom": "4",
-        "mcarre": "99"
+        "space": "55"
     },
     {
-        "price": "102",
-        "name": "Nom4",
-        "adresse": "Adresse4",
+        "prix": "102",
+        "nom": "mana",
+        "lieux": "97369",
         "bed": 7,
-        "bathroom": "4",
-        "mcarre": "99"
+        "bathroom": "7",
+        "space": "69"
     }
 ]

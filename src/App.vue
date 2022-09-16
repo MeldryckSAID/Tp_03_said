@@ -6,25 +6,25 @@
     </h4>
     <ul>
       <li>
-        <router-link class="text-red-600 underline" to="/">
+        <router-link class="text-black underline" to="/">
           lien vers
           <code class="font-mono">/src/pages/index.vue</code>
         </router-link>
       </li>
       <li>
-        <router-link class="text-red-600 underline" to="Simple">
+        <router-link class="text-green-600 underline" to="Simple">
           lien vers
           <code class="font-mono">/src/pages/Simple.vue</code>
         </router-link>
       </li>
       <li>
-        <router-link class="text-red-600 underline" to="liste">
+        <router-link class="text-pink-600 underline" to="liste">
           lien vers
           <code class="font-mono">/src/pages/liste.vue</code>
         </router-link>
       </li>
       <li>
-        <router-link class="text-red-600 underline" to="liste-fetch">
+        <router-link class="text-teal-700 underline" to="list-fetch">
           lien vers
           <code class="font-mono">/src/pages/liste-fetch.vue</code>
         </router-link>
