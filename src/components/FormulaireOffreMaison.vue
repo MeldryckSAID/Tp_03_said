@@ -1,28 +1,60 @@
+
+
 <script setup lang="ts">
-    import{ ref } from "@vue/reactivity";
-    import Card from "./card.vue";
-    //on fait une variable réative qui référence les données 
-    //attention : faire une ref pas une re&ctive car :
-    //c'est l'objet qui doit etre réactif pas ses props 
-    const Maisons = ref({});
+import { supabase } from '@/supabase'
+import { ref } from "@vue/reactivity";
+
+import { label } from "@formkit/inputs";
+import { useRouter } from "vue-router";
+import Card from "./card.vue";
+
+const router = useRouter();
+ const Maisons = ref({});
+
+const props = defineProps(["id"]);
+if (props.id) {
+    // On charge les données de la maison
+    let { data, error } = await supabase
+        .from("Maison")
+        .select("*")
+        .eq("id", props.id);
+    if (error) console.log("n'a pas pu charger le table Maison :", error);
+    else Maisons.value = (data as any[])[0];
+}
+
+
+async function upsertMaison(dataForm, node) {
+    const { data, error } = await supabase.from("Maisons").upsert(dataForm);
+    if (error || !data) node.setErrors([error?.message])
+    else {
+        node.setErrors([]);
+        router.push({ name: "edit-id", params: { id: data[0].id } });
+    }
+}
+
+
+
+
 </script>
 
 <template>
     
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap justify-center ">
         <div class= " p-2">
             <h2 class="text-2xl"> Résultat (Prévisualition )</h2>
             <Card v-bind="Maisons"/>
         </div>
-         <div class="justify-center  border-x-2  border-x-blue-900 border-y-2  border-y-blue-900 text-center ">
-        <div class="p-2">
+         <div class=" flex items-center  text-center font-medium  rounded-xl border-x-2   border-x-white  border-y-8  border-y-black border-current   bg-indigo-500 ">
+        <div class="p-4 m-4 ">
             <!--on passe la ref a fromkit -->
-            <FormKit type="form" v-model="Maisons"
-            :submit-attrs="{ classes: { input: 'bg-red-300 p-1 rounded' } }"
+           
+            <FormKit type="form"  @submit="upsertMaison"  v-model="Maisons" 
+            :submit-attrs="{ classes: 
+                { input: 'bg-pink-600 text-white p-1 rounded hover:bg-white hover:text-black' } }"
 
             :config="{
                      classes: {
-                     input: 'p-1 rounded  border-x-2 border-y-2 border-x-black border-y-black  ',
+                     input: 'p-1 rounded  border-x-2 border-y-2 border-x-black border-y-black focus:bg-green-300 focus:border-x-white focus:border-current focus:border-y-white focus:border-y-4 focus:border-x-4 hover:bg-red-400 ',
                      label: 'text-black',
                      
  },
@@ -30,11 +62,21 @@
             >
                 <FormKit name="nom" label="Nom"/>
                 <FormKit name="prix" label="Prix" type="number"/>
+                <FormKit name="lieux" label="Lieux"/>
+                <FormKit name="bed" label="Bed" type="number"/>
+                <FormKit name="bathroom" label="Bathroom" type="number"/>
+                <FormKit name="space1" label="Space" type="number"/>
+                <FormKit name="quartier" label="quartier" type="nom"/>
+                <FormKit name="commune" label="commune" type="nom"/>
+
+
                 <FormKit name="favori" label="Mettre en valeur " type="checkbox" wrapper-class="flex" class="p-7" />
                
 
             </FormKit>
+
         </div>
+        
         </div> 
     </div>
     

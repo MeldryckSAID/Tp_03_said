@@ -7,32 +7,47 @@
     <ul>
       <li>
         <router-link class="text-black underline" to="/">
-          lien vers
+           
           <code class="font-mono">/src/pages/index.vue</code>
         </router-link>
       </li>
       <li>
         <router-link class="text-green-600 underline" to="Simple">
-          lien vers
+           
           <code class="font-mono">/src/pages/Simple.vue</code>
         </router-link>
       </li>
       <li>
         <router-link class="text-pink-600 underline" to="liste">
-          lien vers
+           
           <code class="font-mono">/src/pages/liste.vue</code>
         </router-link>
       </li>
       <li>
-        <router-link class="text-teal-700 underline" to="list-fetch">
-          lien vers
-          <code class="font-mono">/src/pages/liste-fetch.vue</code>
+        <router-link class="text-green-700 underline" to="list-fetch">
+         
+          <code class="font-mono">liste-fetch.vue</code>
         </router-link>
       </li>
       <li>
-        <router-link class="text-teal-700 underline" to="new">
-          lien vers
+        <router-link class="text-zinc-900-700 underline" to="new">
+           
           <code class="font-mono">/src/pages/new.vue</code>
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-purple-700 underline" to="list-supabase">
+          liste depuis supa
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-violet-700 underline" to="seco">
+         lien pour se connecter 
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-violet-700 underline" to="quartier">
+         Quartier
         </router-link>
       </li>
     </ul>

@@ -5,7 +5,7 @@
         "lieux": "97300",
         "bed": 6,
         "bathroom": "4",
-        "space": "100",
+        "space1": "100",
         "Image" : "src/assets/house.png"
     },
     {
@@ -14,7 +14,7 @@
         "lieux": "97351",
         "bed": 13,
         "bathroom": "9",
-        "space": "192"
+        "space1": "192"
     },
     {
         "prix": "10 80",
@@ -22,7 +22,7 @@
         "lieux": "97355",
         "bed": 7,
         "bathroom": "4",
-        "space": "55"
+        "space1": "55"
     },
     {
         "prix": "102",
@@ -30,6 +30,6 @@
         "lieux": "97369",
         "bed": 7,
         "bathroom": "7",
-        "space": "69"
+        "space1": "69"
     }
 ]
