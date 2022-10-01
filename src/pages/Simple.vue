@@ -12,8 +12,9 @@ const unObjet = {
 </script>
 
 <template>
-  <div>
-    <p>Simple</p>
+  
+    <p class="text-xl font-bold text-center py-4 bg-black text-indigo-400">Simple</p>
+    <div class="flex flex-row justify-center" >
     <Card></Card>
     <Card
       v-bind="{

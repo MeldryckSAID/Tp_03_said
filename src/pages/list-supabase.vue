@@ -9,8 +9,8 @@ console.log(Maisons);
 </script>
 
 <template>
-  <h2 class="text-center">Liste avec supabase</h2>
-  <div class="flex flex-row">
+  <h2  class="text-xl font-bold text-center py-4 bg-black text-indigo-400">Liste avec supabase</h2>
+  <div class="flex flex-row justify-center">
     <div v-for="m in Maisons" :key="m">
       <Card v-bind="m"></Card>
     </div>

@@ -9,9 +9,11 @@ if (error) console.log("n'a pas pu charger la table quartiercommune :", error);
 </script>
 
 <template>
-  <section class="flex flex-col">
-    <h3 class="text-2xl">Liste des quartier par commune avec supabase</h3>
+  <h3 class="bg-black py-4 text-center text-xl font-bold text-indigo-400">
+    Liste des quartier par commune avec supabase
+  </h3>
 
+  <section class="flex flex-col bg-indigo-300 p-4 font-bold text-white">
     <!-- <ul>
       <li v-for="quartierObject in (data as any[])">
         {{ quartierObject.libelle_commune }} -
@@ -29,13 +31,14 @@ if (error) console.log("n'a pas pu charger la table quartiercommune :", error);
       <DisclosureButton>
         {{ libelle_commune }}
       </DisclosureButton>
-      <DisclosurePanel>
+      <DisclosurePanel class="text-black mx-4 list-item font-normal">
         <ul>
           <li
             v-for="{
               code_quartier,
               libelle_quartier,
             } in tableauDeQuartieDUneCommune"
+           
             :key="code_quartier"
           >
             {{ libelle_quartier }}

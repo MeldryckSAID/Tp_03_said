@@ -26,7 +26,7 @@ defineProps({
       class="h-48 w-full rounded-t-lg object-cover"
     />
     <figcaption
-      class="flex w-full flex-col gap-4 rounded-b border border-x-4 border-y-4 border-indigo-50 py-7 px-5"
+      class="flex  flex-col gap-4 rounded-b border border-x-4 border-y-4 border-indigo-50 py-7 px-5"
     >
       <div class="flex justify-between">
         <div class="w-2/5">

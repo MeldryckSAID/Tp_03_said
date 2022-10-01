@@ -5,8 +5,12 @@ console.log(Maisons);
 </script>
 
 <template>
-  <div>
-    <p>Liste</p>
-    <Card v-for="m in Maisons" :key="m" v-bind="m"></Card>
-  </div>
+
+    <p  class="text-xl font-bold text-center py-4 bg-black text-indigo-400">Liste</p>
+
+    <div class="flex flex-row justify-center">
+      <Card v-for="m in Maisons" :key="m" v-bind="m"></Card>
+    </div>
+    
+
 </template>
