@@ -11,6 +11,7 @@
           <code class="font-mono">/src/pages/index.vue</code>
         </router-link>
       </li>
+      <p> tp1 </p>
       <li>
         <router-link class="text-green-600 underline" to="Simple">
            
@@ -29,12 +30,17 @@
           <code class="font-mono">liste-fetch.vue</code>
         </router-link>
       </li>
+      <p>
+        tp3
+      </p>
+
       <li>
         <router-link class="text-zinc-900-700 underline" to="new">
            
           <code class="font-mono">/src/pages/new.vue</code>
         </router-link>
       </li>
+
       <li>
         <router-link class="text-purple-700 underline" to="list-supabase">
           liste depuis supa
@@ -46,10 +52,25 @@
         </router-link>
       </li>
       <li>
-        <router-link class="text-violet-700 underline" to="quartier">
-         Quartier
+        <router-link class="text-zinc-900-700 underline" to="[id]">
+           
+          <code class="font-mono">[id]</code>
         </router-link>
       </li>
+      <hr>
+      <p>tp4</p>
+      <hr>
+      <li>
+        <router-link class="text-violet-700 underline" to="quartier">
+         afficher les  Quartiers
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-violet-700 underline" to="editQuartier">
+         editer les  Quartiers
+        </router-link>
+      </li>
+      
     </ul>
   </nav>
 

@@ -10,7 +10,7 @@ if (error) console.log("n'a pas pu charger la table quartiercommune :", error);
 
 <template>
   <section class="flex flex-col">
-    <h3 class="text-2xl">Liste des quartiers</h3>
+    <h3 class="text-2xl">Liste des quartier par commune  avec  supabase</h3>
 
     <!-- <ul>
       <li v-for="quartierObject in (data as any[])">

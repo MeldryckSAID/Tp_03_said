@@ -7,21 +7,32 @@ import { useRouter } from "vue-router";
 import Card from "./card.vue";
 
 const router = useRouter();
-const Maisons = ref({});
+const quartier = ref({});
+
+const { data: libelle_commune, error } = await supabase
+  .from("commune")
+  .select("*");
+if (error) console.log("n'a pas pu charger la table Commune :", error);
+
+// Les convertir par `map` en un tableau d'objets {value, label} pour FormKit
+const optionsCommune = libelle_commune?.map((commune) => ({
+  value: commune.code_Commune,
+  label: commune.libelle_commune,
+}));
 
 const props = defineProps(["id"]);
 if (props.id) {
   // On charge les données de la maison
   let { data, error } = await supabase
-    .from("Maison")
+    .from("quartier")
     .select("*")
     .eq("id", props.id);
-  if (error) console.log("n'a pas pu charger le table Maison :", error);
-  else Maisons.value = (data as any[])[0];
+  if (error) console.log("n'a pas pu charger le table quartier :", error);
+  else quartier.value = (data as any[])[0];
 }
 
-async function upsertMaison(dataForm, node) {
-  const { data, error } = await supabase.from("Maisons").upsert(dataForm);
+async function upsertquartier(dataForm, node) {
+  const { data, error } = await supabase.from("quartier").upsert(dataForm);
   if (error || !data) node.setErrors([error?.message]);
   else {
     node.setErrors([]);
@@ -33,8 +44,7 @@ async function upsertMaison(dataForm, node) {
 <template>
   <div class="flex flex-wrap justify-center">
     <div class="p-2">
-      <h2 class="text-2xl">Résultat (Prévisualition )</h2>
-      <Card v-bind="Maisons" />
+      <Card v-bind="quartier" />
     </div>
     <div
       class="flex items-center rounded-xl border-x-2 border-y-8 border-current border-x-white border-y-black bg-indigo-500 text-center font-medium"
@@ -44,8 +54,8 @@ async function upsertMaison(dataForm, node) {
 
         <FormKit
           type="form"
-          @submit="upsertMaison"
-          v-model="Maisons"
+          @submit="upsertquartier"
+          v-model="quartier"
           :submit-attrs="{
             classes: {
               input:
@@ -60,14 +70,12 @@ async function upsertMaison(dataForm, node) {
             },
           }"
         >
-          <FormKit name="nom" label="Nom" />
-          <FormKit name="prix" label="Prix" type="number" />
-          <FormKit name="lieux" label="Lieux" />
-          <FormKit name="bed" label="Bed" type="number" />
-          <FormKit name="bathroom" label="Bathroom" type="number" />
-          <FormKit name="space1" label="Space" type="number" />
-          <FormKit name="quartier" label="quartier" type="text" />
-          <FormKit name="commune" label="commune" type="text" />
+          <FormKit
+            class="p-7"
+            name="libelle_quartier"
+            label="quartier"
+            type="text"
+          />
 
           <FormKit
             name="favori"
@@ -77,6 +85,12 @@ async function upsertMaison(dataForm, node) {
             class="p-7"
           />
         </FormKit>
+        <FormKit
+          type="select"
+          name="code_Commune"
+          label="commune"
+          :options="optionsCommune"
+        />
       </div>
     </div>
   </div>

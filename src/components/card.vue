@@ -5,6 +5,8 @@ import Space from "../components/icons/space.vue";
 
 defineProps({
   nom: { type: String, default: "remire" },
+  quartier: { type: String, default: "zephir" },
+  commune: { type: String, default: "cayenne" },
   prix: { type: Number, default: "2700" },
   lieux: { type: String, default: "montjoly 45 rue route des plages 97354" },
   bed: { type: Number, default: 4 },
@@ -16,7 +18,7 @@ defineProps({
 
 <template>
   <figure
-    class="mx-8 mt-12 flex flex-col rounded-lg border-x-2 w-max border-y-4 border-indigo-400"
+    class="mx-8 mt-12 flex w-max flex-col rounded-lg border-x-2 border-y-4 border-indigo-400"
   >
     <img
       src="src/assets/house2.png"
@@ -45,6 +47,14 @@ defineProps({
       <p class="text-base font-normal text-gray-900">
         {{ lieux }}
       </p>
+      <div>
+        <quartier></quartier>
+        <span>{{ quartier }}</span>
+      </div>
+      <div>
+        <commune></commune>
+        <span>{{ commune }}</span>
+      </div>
       <div class="w-full border border-indigo-50"></div>
       <div class="flex justify-between">
         <div class="flex items-center gap-2">
