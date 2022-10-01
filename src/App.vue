@@ -7,36 +7,29 @@
     <ul>
       <li>
         <router-link class="text-black underline" to="/">
-           
           <code class="font-mono">/src/pages/index.vue</code>
         </router-link>
       </li>
-      <p> tp1 </p>
+      <p>tp1</p>
       <li>
         <router-link class="text-green-600 underline" to="Simple">
-           
           <code class="font-mono">/src/pages/Simple.vue</code>
         </router-link>
       </li>
       <li>
         <router-link class="text-pink-600 underline" to="liste">
-           
           <code class="font-mono">/src/pages/liste.vue</code>
         </router-link>
       </li>
       <li>
         <router-link class="text-green-700 underline" to="list-fetch">
-         
           <code class="font-mono">liste-fetch.vue</code>
         </router-link>
       </li>
-      <p>
-        tp3
-      </p>
+      <p>tp3</p>
 
       <li>
         <router-link class="text-zinc-900-700 underline" to="new">
-           
           <code class="font-mono">/src/pages/new.vue</code>
         </router-link>
       </li>
@@ -48,41 +41,33 @@
       </li>
       <li>
         <router-link class="text-violet-700 underline" to="seco">
-         lien pour se connecter 
+          lien pour se connecter
         </router-link>
       </li>
-      <li>
-        <router-link class="text-zinc-900-700 underline" to="[id]">
-           
-          <code class="font-mono">[id]</code>
-        </router-link>
-      </li>
-      <hr>
+
+      <hr />
       <p>tp4</p>
-      <hr>
+      <hr />
       <li>
         <router-link class="text-violet-700 underline" to="quartier">
-         afficher les  Quartiers
+          afficher les Quartiers
         </router-link>
       </li>
       <li>
         <router-link class="text-violet-700 underline" to="editQuartier">
-         editer les  Quartiers
+          editer les Quartiers
         </router-link>
       </li>
-      
     </ul>
   </nav>
 
   <!-- Affiche les pages -->
   <Suspense>
     <router-view class="m-2 border-2 p-2" />
-    <template #fallback>
-      Loading...
-    </template>
+    <template #fallback> Loading... </template>
   </Suspense>
 </template>
 
 <script setup lang="ts">
-import { Bars3Icon } from '@heroicons/vue/20/solid'
+import { Bars3Icon } from "@heroicons/vue/20/solid";
 </script>

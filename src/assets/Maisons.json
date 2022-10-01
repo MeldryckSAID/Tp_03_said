@@ -1,35 +1,35 @@
 [
-    {
-        "prix": "100",
-        "nom": "cayenne",
-        "lieux": "97300",
-        "bed": 6,
-        "bathroom": "4",
-        "space1": "100",
-        "Image" : "src/assets/house.png"
-    },
-    {
-        "prix": "100 800",
-        "nom": "matoury",
-        "lieux": "97351",
-        "bed": 13,
-        "bathroom": "9",
-        "space1": "192"
-    },
-    {
-        "prix": "10 80",
-        "nom": "soula",
-        "lieux": "97355",
-        "bed": 7,
-        "bathroom": "4",
-        "space1": "55"
-    },
-    {
-        "prix": "102",
-        "nom": "mana",
-        "lieux": "97369",
-        "bed": 7,
-        "bathroom": "7",
-        "space1": "69"
-    }
+  {
+    "prix": "100",
+    "nom": "cayenne",
+    "lieux": "97300",
+    "bed": 6,
+    "bathroom": "4",
+    "space1": "100",
+    "Image": "src/assets/house.png"
+  },
+  {
+    "prix": "100 800",
+    "nom": "matoury",
+    "lieux": "97351",
+    "bed": 13,
+    "bathroom": "9",
+    "space1": "192"
+  },
+  {
+    "prix": "10 80",
+    "nom": "soula",
+    "lieux": "97355",
+    "bed": 7,
+    "bathroom": "4",
+    "space1": "55"
+  },
+  {
+    "prix": "102",
+    "nom": "mana",
+    "lieux": "97369",
+    "bed": 7,
+    "bathroom": "7",
+    "space1": "69"
+  }
 ]
