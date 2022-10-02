@@ -28,6 +28,12 @@ async function upsertMaison(dataForm, node) {
     router.push({ name: "edit-id", params: { id: data[0].id } });
   }
 }
+
+const { data: dataQuartierCommune, error } = await supabase
+  .from("quartiercommune")
+  .select("*");
+if (error) console.log("n'a pas pu charger la vue quartiercommune :", error);
+
 </script>
 
 <template>
@@ -68,6 +74,8 @@ async function upsertMaison(dataForm, node) {
           <FormKit name="space1" label="Space" type="number" />
           <FormKit name="quartier" label="quartier" type="text" />
           <FormKit name="commune" label="commune" type="text" />
+
+          
 
           <FormKit
             name="favori"
